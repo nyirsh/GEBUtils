@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4074B23B-BCF1-40BF-BF1D-AA9166813D19}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEBUtils</RootNamespace>
+    <AssemblyName>GEBExtractor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EDATOperations.cs" />
+    <Compile Include="FHandlers\AT3.cs" />
+    <Compile Include="FHandlers\GIM.cs" />
+    <Compile Include="FHandlers\GMO.cs" />
+    <Compile Include="FHandlers\PMF.cs" />
+    <Compile Include="FHandlers\Pres.cs" />
+    <Compile Include="FHandlers\TR2.cs" />
+    <Compile Include="FHandlers\VAG.cs" />
+    <Compile Include="Isoutils\ApplicationImageType.cs" />
+    <Compile Include="Isoutils\ApplicationType.cs" />
+    <Compile Include="Isoutils\BaseStorage.cs" />
+    <Compile Include="Isoutils\BaseVolumeDescriptor.cs" />
+    <Compile Include="Isoutils\BlockCacheStream.cs" />
+    <Compile Include="Isoutils\Buffer.cs" />
+    <Compile Include="Isoutils\BufferStream.cs" />
+    <Compile Include="Isoutils\BuildDirectoryInfo.cs" />
+    <Compile Include="Isoutils\BuildDirectoryMember.cs" />
+    <Compile Include="Isoutils\BuilderBufferExtent.cs" />
+    <Compile Include="Isoutils\BuilderExtent.cs" />
+    <Compile Include="Isoutils\BuilderExtentSource.cs" />
+    <Compile Include="Isoutils\BuilderSparseStreamExtent.cs" />
+    <Compile Include="Isoutils\BuilderStreamExtent.cs" />
+    <Compile Include="Isoutils\BuildFileInfo.cs" />
+    <Compile Include="Isoutils\BuildParameters.cs" />
+    <Compile Include="Isoutils\BuiltStream.cs" />
+    <Compile Include="Isoutils\CDBuilder.cs" />
+    <Compile Include="Isoutils\CDReader.cs" />
+    <Compile Include="Isoutils\ChsAddress.cs" />
+    <Compile Include="Isoutils\ClusterMap.cs" />
+    <Compile Include="Isoutils\CommonVolumeDescriptor.cs" />
+    <Compile Include="Isoutils\ConcatStream.cs" />
+    <Compile Include="Isoutils\DataReader.cs" />
+    <Compile Include="Isoutils\DataWriter.cs" />
+    <Compile Include="Isoutils\DeviceRecord.cs" />
+    <Compile Include="Isoutils\DirectoryExtent.cs" />
+    <Compile Include="Isoutils\DirectoryRecord.cs" />
+    <Compile Include="Isoutils\DiscDirectoryInfo.cs" />
+    <Compile Include="Isoutils\DiscFileInfo.cs" />
+    <Compile Include="Isoutils\DiscFileSystem.cs" />
+    <Compile Include="Isoutils\DiscFileSystemChecker.cs" />
+    <Compile Include="Isoutils\DiscFileSystemInfo.cs" />
+    <Compile Include="Isoutils\DiscFileSystemOptions.cs" />
+    <Compile Include="Isoutils\ExtentStream.cs" />
+    <Compile Include="Isoutils\File.cs" />
+    <Compile Include="Isoutils\FileExtent.cs" />
+    <Compile Include="Isoutils\FileLocator.cs" />
+    <Compile Include="Isoutils\FileSystemInfo.cs" />
+    <Compile Include="Isoutils\FileSystemManager.cs" />
+    <Compile Include="Isoutils\FloppyDiskType.cs" />
+    <Compile Include="Isoutils\Geometry.cs" />
+    <Compile Include="Isoutils\IBuffer.cs" />
+    <Compile Include="Isoutils\IByteArraySerializable.cs" />
+    <Compile Include="Isoutils\IClusterBasedFileSystem.cs" />
+    <Compile Include="Isoutils\IDiagnosticTraceable.cs" />
+    <Compile Include="Isoutils\IFileSystem.cs" />
+    <Compile Include="Isoutils\InheritType.cs" />
+    <Compile Include="Isoutils\InvalidFileSystemException.cs" />
+    <Compile Include="Isoutils\IsoContext.cs" />
+    <Compile Include="Isoutils\IsoUtilities.cs" />
+    <Compile Include="Isoutils\IVfsDirectory.cs" />
+    <Compile Include="Isoutils\IVfsFile.cs" />
+    <Compile Include="Isoutils\IWindowsFileSystem.cs" />
+    <Compile Include="Isoutils\MirrorStream.cs" />
+    <Compile Include="Isoutils\ObjectCache.cs" />
+    <Compile Include="Isoutils\ObjectType.cs" />
+    <Compile Include="Isoutils\Ownership.cs" />
+    <Compile Include="Isoutils\PassthroughStreamBuilder.cs" />
+    <Compile Include="Isoutils\PathTable.cs" />
+    <Compile Include="Isoutils\PathTableRecord.cs" />
+    <Compile Include="Isoutils\PrimaryVolumeDescriptor.cs" />
+    <Compile Include="Isoutils\Range.cs" />
+    <Compile Include="Isoutils\ReaderDirectory.cs" />
+    <Compile Include="Isoutils\ReadOnlyDiscFileSystem.cs" />
+    <Compile Include="Isoutils\ReparsePoint.cs" />
+    <Compile Include="Isoutils\Resources.Designer.cs" />
+    <Compile Include="Isoutils\Sizes.cs" />
+    <Compile Include="Isoutils\SnapshotStream.cs" />
+    <Compile Include="Isoutils\SparseMemoryBuffer.cs" />
+    <Compile Include="Isoutils\SparseMemoryStream.cs" />
+    <Compile Include="Isoutils\SparseStream.cs" />
+    <Compile Include="Isoutils\StreamBuffer.cs" />
+    <Compile Include="Isoutils\StreamBuilder.cs" />
+    <Compile Include="Isoutils\StreamExtent.cs" />
+    <Compile Include="Isoutils\StreamPump.cs" />
+    <Compile Include="Isoutils\StripedStream.cs" />
+    <Compile Include="Isoutils\SubBuffer.cs" />
+    <Compile Include="Isoutils\SubStream.cs" />
+    <Compile Include="Isoutils\SupplementaryVolumeDescriptor.cs" />
+    <Compile Include="Isoutils\ThreadSafeStream.cs" />
+    <Compile Include="Isoutils\Tuple.cs" />
+    <Compile Include="Isoutils\UnixFilePermissions.cs" />
+    <Compile Include="Isoutils\Utilities.cs" />
+    <Compile Include="Isoutils\VfsCDReader.cs" />
+    <Compile Include="Isoutils\VfsContext.cs" />
+    <Compile Include="Isoutils\VfsDirEntry.cs" />
+    <Compile Include="Isoutils\VfsFileSystem.cs" />
+    <Compile Include="Isoutils\VfsFileSystemFacade.cs" />
+    <Compile Include="Isoutils\VfsFileSystemFactory.cs" />
+    <Compile Include="Isoutils\VfsFileSystemFactoryAttribute.cs" />
+    <Compile Include="Isoutils\VfsFileSystemInfo.cs" />
+    <Compile Include="Isoutils\VfsReadOnlyFileSystem.cs" />
+    <Compile Include="Isoutils\VolumeDescriptorRegion.cs" />
+    <Compile Include="Isoutils\VolumeDescriptorSetTerminator.cs" />
+    <Compile Include="Isoutils\VolumeInfo.cs" />
+    <Compile Include="Isoutils\WellKnownElement.cs" />
+    <Compile Include="Isoutils\ZeroStream.cs" />
+    <Compile Include="Linq.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IsoOperations.cs" />
+    <Compile Include="RDPOperations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Isoutils\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
